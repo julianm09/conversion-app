@@ -1,6 +1,6 @@
 const getRates = async () => {
     const res = await axios.get(
-      "https://v6.exchangerate-api.com/v6/5536c5ab733c937f41be6072/latest/PHP"
+      "https://v6.exchangerate-api.com/v6/03c5b60a9aa12a5a3ed27421/latest/JPY"
     );
     console.log(res.data);
     return res.data;
@@ -14,4 +14,4 @@ const getRates = async () => {
   convertPHP(100, "CAD");
   
   
-  module.exports = convertPHP
+  module.exports = convertPHP;
