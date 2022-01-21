@@ -1,11 +1,9 @@
 const axios = require("axios");
-const convertJPY = require("./Conversions");
+const { convertJPY, convertKRW } = require("./Conversions");
 
 const getRates = async () => {
-  const res = await axios.get(
-    "https://v6.exchangerate-api.com/v6/03c5b60a9aa12a5a3ed27421/latest/CAD"
-  );
-  console.log(res.data);
+  console.log(await convertJPY(100, "CAD"));
+  console.log(await convertKRW(100, "CAD"));
 };
 
 getRates();
