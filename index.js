@@ -1,8 +1,5 @@
-const { add, subtract } = require("./MathOps");
 const axios = require("axios");
-
-// console.log(add(3, 5));
-// console.log(subtract(3, 5));
+const convertJPY = require("./Conversions");
 
 const getRates = async () => {
   const res = await axios.get(
