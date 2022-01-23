@@ -1,14 +1,16 @@
+const axios = require("axios");
+
 const getRates = async () => {
     const res = await axios.get(
-      "https://v6.exchangerate-api.com/v6/03c5b60a9aa12a5a3ed27421/latest/JPY"
+      "https://v6.exchangerate-api.com/v6/03c5b60a9aa12a5a3ed27421/latest/PHP"
     );
-    console.log(res.data);
     return res.data;
   };
   
   const convertPHP = async (x, y) => {
     const rates = await getRates();
-    return x * rates[y];
+    const conversion = (await rates.conversion_rates[y]) * x;
+    return conversion;
   };
   
   convertPHP(100, "CAD");
