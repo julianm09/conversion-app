@@ -1,15 +1,8 @@
-const { add, subtract } = require("./MathOps");
-const axios = require("axios");
-
-console.log(add(3, 5));
-console.log(subtract(3, 5));
+const {convertJPY, convertEUR, convertPHP, convertKRW, convertUSD } = require('./Conversions');
 
 const getRates = async () => {
-  
-  const res = await axios.get(
-    "https://v6.exchangerate-api.com/v6/03c5b60a9aa12a5a3ed27421/latest/"
-  );
-  console.log(res.data);
+  console.log(await convertJPY(100, "CAD"));
+  console.log(await convertKRW(100, "CAD"));
 };
 
 getRates();
