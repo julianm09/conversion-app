@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { convertJPY, convertKRW } = require("./Conversions");
+const {convertJPY, convertEUR, convertPHP, convertKRW} = require('./Conversions');
 
 const getRates = async () => {
   console.log(await convertJPY(100, "CAD"));
