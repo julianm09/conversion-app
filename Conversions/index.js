@@ -1,4 +1,5 @@
-//import your js file
+const convertEUR = require('./convertEUR');
+const convertUSD = require('./convertUSD');
 const convertJPY = require('./convertJPY');
 const convertEUR = require('./convertEUR');
 const convertPHP = require('./convertPHP');
@@ -7,5 +8,6 @@ const convertPHP = require('./convertPHP');
 module.exports = {
     convertJPY,
     convertEUR,
+    convertUSD,
     convertPHP
 };
