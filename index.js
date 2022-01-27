@@ -1,11 +1,17 @@
-const {convertJPY, convertEUR, convertPHP, convertKRW, convertUSD } = require('./Conversions');
+const express = require("express");
+const app = express();
+const conversionRouter = require("./Routes/conversion");
 
-const getRates = async () => {
-  console.log(await convertJPY(100, "CAD"));
-  console.log(await convertKRW(100, "CAD"));
-  console.log(await convertEUR(100, "CAD"));
-  console.log(await convertPHP(100, "CAD"));
-  console.log(await convertUSD(100, "CAD"));
-};
-
-getRates();
+app.use(express.json());
+app.use(conversionRouter);
+app.listen(3000, () =>
+  console.log(
+    `server running on 3000"
+post
+    {
+      "fromCurrency": "usd",
+      "toCurrency": "cad",
+      "amount": "10"
+    }`
+  )
+);
