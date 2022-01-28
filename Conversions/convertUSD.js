@@ -13,7 +13,4 @@ const getRates = async () => {
     return conversion;
   };
   
-  convertUSD(100, "USD");
-  
-  
   module.exports = convertUSD
