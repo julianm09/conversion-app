@@ -12,5 +12,5 @@ module.exports = {
     convertUSD,
     convertPHP,
     convertKRW,
-    convert
+
 };
