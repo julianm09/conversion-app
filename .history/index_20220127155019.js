@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const conversionRouter = require("./Routes/conversion");
-const convertKRW = require("./Routes/convertKRW");
+const convertKRW = require("/Routes/convertKRW");
 
 app.use(express.json());
 app.use(conversionRouter);
