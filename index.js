@@ -1,11 +1,8 @@
 const express = require("express");
 const app = express();
-const conversionRouter = require("./Routes/conversion");
+const convertJPY = require("./Routes/convertJPY")
 
 app.use(express.json());
-app.use(conversionRouter);
-app.listen(3000, () =>
-  console.log(
-    `server running on 3000`
-  )
-);
+app.use(convertJPY)
+
+app.listen(3000, () => console.log(`server running on 3000`));
