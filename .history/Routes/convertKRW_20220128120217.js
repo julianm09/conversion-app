@@ -14,10 +14,10 @@
 
 // module.exports = router;
 
-const express = require("express");
-const router = express.Router();
-const { getConversions } = require("../Controller/convertKRW");
+// const express = require("express");
+// const router = express.Router();
+// const { getConversions } = require("../Controller/convertKRW");
 
-router.get("/convertKRW", getConversions);
+// router.get("/convertKRW", getConversions);
 
-module.exports = router;
+// module.exports = router;
